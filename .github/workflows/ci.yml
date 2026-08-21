@@ -1,0 +1,100 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  # The decay check is time-dependent: a dataset passes today and fails once it
+  # crosses its threshold. Nothing would push on the day that happens, so CI has
+  # to ask on its own schedule or the guarantee is only as good as commit cadence.
+  schedule:
+    - cron: "0 8 * * 1"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 20 is the development baseline; 22 catches anything that breaks on the
+        # runtime a deployment is likely to actually use.
+        node: [20, 22]
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+
+      - run: npm ci
+
+      - name: Typecheck
+        # tsconfig excludes test/, so this checks src only. Test files are
+        # typechecked by ts-jest during `npm test` — both are needed.
+        run: npx tsc --noEmit
+
+      - name: Build
+        run: npm run build
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Smoke — stdio transport
+        run: node scripts/smoke.mjs
+
+      - name: Smoke — Streamable HTTP transport
+        run: node scripts/smoke-http.mjs
+
+      # The only check that runs the tools under workerd rather than Node. The
+      # other two smokes cannot catch a node built-in creeping into a code path,
+      # because they are themselves running on Node.
+      #
+      # Skipped on Node 20 because wrangler now requires >=22. That is a dev
+      # toolchain constraint, not a server one: engines stays >=20 because the
+      # published package needs only the SDK and zod, and the matrix keeps 20 so
+      # the server itself is still verified on the oldest runtime we claim.
+      - name: Smoke — Cloudflare worker (workerd)
+        if: matrix.node >= 22
+        run: node scripts/smoke-worker.mjs
+
+  audit:
+    # Separate job for the same reason as decay: this one fails on somebody
+    # else's schedule, not on a commit here, and that is legible only if it
+    # fails alone. The weekly cron above is what makes it a real check — a
+    # published advisory does not wait for us to push.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      # Shipped dependencies only, and the bar is "nothing at all". This tree is
+      # two direct dependencies deep; anything here reaches a consumer's install.
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=low
+
+      # Dev tooling never reaches a consumer, so an advisory here is a scheduling
+      # problem rather than an exposure — usually waiting on a wrangler bump.
+      # Reported, but not a build failure.
+      - name: Audit dev dependencies (advisory only)
+        run: npm audit || true
+
+  decay:
+    # Separated so a stale-data failure is legible at a glance, rather than being
+    # one red X among five. This is the job that will fail first in a year's time.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Regulatory data freshness
+        run: npm run check-decay

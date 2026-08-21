@@ -1,0 +1,59 @@
+{
+  "provenance": {
+    "cfr_cite": "1904.31",
+    "source_url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1904/subpart-D/section-1904.31",
+    "last_verified": "2026-08-21",
+    "decay_threshold_days": 365,
+    "note": "1904.31 decides WHOSE 300 Log a case belongs on when the injured person is not a straightforward payroll employee. One test controls almost all of it: DAY-TO-DAY SUPERVISION. Payroll is not the test for temps and contractors \u2014 supervision is. 1904.31(b)(4) then requires the case be recorded exactly once, on one employer's log or the other's, never both.",
+    "verification_note": "Verified against the eCFR text of 1904.31. Rule wording here is condensed for use as a controlled vocabulary \u2014 the substance and the sub-clause cites are checked, the phrasing is not verbatim."
+  },
+  "payroll_categories": {
+    "cfr_cite": "1904.31(a)",
+    "rule": "All employees on your payroll are covered, whatever their category \u2014 labor, executive, hourly, salary, part-time, seasonal, or migrant. Their recordable cases go on your 300 Log regardless of who supervises them.",
+    "categories": [
+      "labor",
+      "executive",
+      "hourly",
+      "salary",
+      "part-time",
+      "seasonal",
+      "migrant"
+    ]
+  },
+  "relationships": {
+    "on_your_payroll": {
+      "cfr_cite": "1904.31(a)",
+      "recording_employer": "you",
+      "supervision_decides": false,
+      "rule": "The worker is on your payroll. You record their recordable injuries and illnesses, whatever their employment category and whoever supervises the work."
+    },
+    "temporary_leased_or_supplied": {
+      "cfr_cite": "1904.31(b)(2)",
+      "recording_employer": "depends_on_supervision",
+      "supervision_decides": true,
+      "rule": "The worker comes from a temporary help service, employee leasing service or personnel supply service. You record their case if YOU supervise them on a day-to-day basis; otherwise the supplying company records it."
+    },
+    "contractor_employee": {
+      "cfr_cite": "1904.31(b)(3)",
+      "recording_employer": "depends_on_supervision",
+      "supervision_decides": true,
+      "rule": "The worker is a contractor's employee working in your establishment. If the contractor provides day-to-day supervision, the contractor records the case. If YOU supervise the work day-to-day, you record it."
+    },
+    "self_employed": {
+      "cfr_cite": "1904.31(b)(1)",
+      "recording_employer": "no_one",
+      "supervision_decides": false,
+      "rule": "Self-employed individuals are not covered by the OSH Act or Part 1904 at all. Their injuries are not recorded by anyone \u2014 not by you, and not by a supplying employer."
+    },
+    "owner_or_partner": {
+      "cfr_cite": "1904.31(a)",
+      "recording_employer": "no_one",
+      "supervision_decides": false,
+      "rule": "In a sole proprietorship or partnership, the owner or partners are not considered employees for recordkeeping purposes, so their injuries are not recorded on the 300 Log."
+    }
+  },
+  "record_once": {
+    "cfr_cite": "1904.31(b)(4)",
+    "rule": "The supplying service or contractor does NOT also record a case you record. Coordinate so each injury and illness is recorded exactly once \u2014 on your 300 Log if you provide day-to-day supervision, or on the other employer's if they do."
+  }
+}

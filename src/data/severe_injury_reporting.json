@@ -1,0 +1,116 @@
+{
+  "provenance": {
+    "cfr_cite": "1904.39",
+    "source_url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1904/subpart-E/section-1904.39",
+    "last_verified": "2026-08-21",
+    "decay_threshold_days": 365,
+    "note": "Severe-injury reporting rule effective 2015-01-01. Reporting deadlines run from when the employer LEARNS of the outcome, not when it occurred. Eligibility windows: a fatality must occur within 30 days of the work-related incident; a hospitalization/amputation/loss of an eye must occur within 24 hours of the incident. Three things defeat an otherwise-reportable event: it was not actually an amputation or a qualifying hospitalization as 1904.39(b)(9)-(b)(11) define them, or it falls in one of the 1904.39(b)(3)-(b)(4) reporting exclusions. In every one of those cases the event is still RECORDABLE \u2014 only the call to OSHA drops away.",
+    "verification_note": "Verified against the eCFR text of 1904.39. Rule wording here is condensed for use as a controlled vocabulary \u2014 the substance and the sub-clause cites are checked, the phrasing is not verbatim."
+  },
+  "reporting": {
+    "fatality": {
+      "deadline_hours": 8,
+      "eligibility_window": {
+        "unit": "days",
+        "amount": 30
+      },
+      "cfr_cite": "1904.39(a)(1)"
+    },
+    "in_patient_hospitalization": {
+      "deadline_hours": 24,
+      "eligibility_window": {
+        "unit": "hours",
+        "amount": 24
+      },
+      "cfr_cite": "1904.39(a)(2)"
+    },
+    "amputation": {
+      "deadline_hours": 24,
+      "eligibility_window": {
+        "unit": "hours",
+        "amount": 24
+      },
+      "cfr_cite": "1904.39(a)(2)"
+    },
+    "loss_of_an_eye": {
+      "deadline_hours": 24,
+      "eligibility_window": {
+        "unit": "hours",
+        "amount": 24
+      },
+      "cfr_cite": "1904.39(a)(2)"
+    }
+  },
+  "reporting_methods": [
+    "By telephone or in person to the OSHA Area Office nearest the site of the incident (1904.39(a)(3)(i))",
+    "By telephone to the OSHA toll-free number 1-800-321-OSHA / 1-800-321-6742 (1904.39(a)(3)(ii))",
+    "By electronic submission using the reporting application at www.osha.gov (1904.39(a)(3)(iii))"
+  ],
+  "definitions": {
+    "in_patient_hospitalization": {
+      "cfr_cite": "1904.39(b)(9)",
+      "definition": "A formal admission to the in-patient service of a hospital or clinic for CARE or TREATMENT.",
+      "excluded": {
+        "cfr_cite": "1904.39(b)(10)",
+        "rule": "An in-patient hospitalization involving only OBSERVATION or DIAGNOSTIC TESTING is not reportable. Only admissions for care or treatment must be reported."
+      }
+    },
+    "amputation": {
+      "cfr_cite": "1904.39(b)(11)",
+      "definition": "The traumatic loss of a limb or other external body part.",
+      "includes": {
+        "severed_or_cut_off": "A part such as a limb or appendage severed, cut off, or amputated \u2014 completely or partially.",
+        "fingertip_amputation": "Fingertip amputations, with or without bone loss.",
+        "medical_amputation": "Medical amputations resulting from irreparable damage.",
+        "reattached_part": "Amputations of body parts that have since been reattached."
+      },
+      "excludes": {
+        "avulsion": "An avulsion is not an amputation.",
+        "enucleation": "An enucleation is not an amputation.",
+        "degloving": "A degloving is not an amputation.",
+        "scalping": "A scalping is not an amputation.",
+        "severed_ear": "A severed ear is not an amputation.",
+        "broken_or_chipped_tooth": "A broken or chipped tooth is not an amputation."
+      }
+    }
+  },
+  "reporting_exclusions": {
+    "cfr_cite": "1904.39(b)(3)-(b)(4)",
+    "note": "These defeat the REPORTING obligation only. The event must still be recorded on the OSHA injury and illness records if the employer is required to keep them.",
+    "exclusions": {
+      "public_road_motor_vehicle_not_in_work_zone": {
+        "cfr_cite": "1904.39(b)(3)",
+        "rule": "A motor vehicle accident on a public street or highway, NOT in a construction work zone, need not be reported to OSHA. If it occurred IN a construction work zone, it must be reported."
+      },
+      "commercial_or_public_transportation": {
+        "cfr_cite": "1904.39(b)(4)",
+        "rule": "An event occurring on a commercial or public transportation system \u2014 airplane, train, subway or bus \u2014 need not be reported to OSHA."
+      }
+    }
+  },
+  "heart_attack": {
+    "cfr_cite": "1904.39(b)(5)",
+    "rule": "A work-related fatality or in-patient hospitalization caused by a heart attack MUST be reported. The local OSHA Area Office director then decides whether to investigate, depending on the circumstances."
+  },
+  "required_information": {
+    "cfr_cite": "1904.39(b)(2)",
+    "items": [
+      "The establishment name",
+      "The location of the work-related incident",
+      "The time of the work-related incident",
+      "The type of reportable event (fatality, in-patient hospitalization, amputation, or loss of an eye)",
+      "The number of employees who suffered the event",
+      "The names of the employees who suffered the event",
+      "Your contact person and their phone number",
+      "A brief description of the work-related incident"
+    ]
+  },
+  "area_office_closed": {
+    "cfr_cite": "1904.39(b)(1)",
+    "rule": "If the Area Office is closed you must use either the 800 number or the online reporting application. Leaving a message on an answering machine, sending a fax, or sending an email does NOT discharge the reporting obligation."
+  },
+  "clock_start": {
+    "cfr_cite": "1904.39(b)(7)-(b)(8)",
+    "rule": "The clock runs from the moment the event \u2014 or its work-relatedness \u2014 is reported to the employer or any of the employer's agents, whichever is the later trigger. 8 hours for a fatality; 24 hours for an in-patient hospitalization, amputation or loss of an eye."
+  }
+}

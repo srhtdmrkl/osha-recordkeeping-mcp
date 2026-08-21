@@ -1,0 +1,41 @@
+{
+  "provenance": {
+    "cfr_cite": "1904.46",
+    "source_url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1904/subpart-G/section-1904.46",
+    "last_verified": "2026-08-21",
+    "decay_threshold_days": 365,
+    "note": "The Part 1904 definitions. Two of these carry weight across most of the other tools: 'physician or other licensed health care professional' appears in 1904.6(b)(3), 1904.7(b)(3)(ii)/(b)(4)(viii)/(b)(5)(v), 1904.9, 1904.10(b)(6), 1904.11 and 1904.29(b)(7) \u2014 and the test is SCOPE OF PRACTICE, not job title. 'Establishment' is defined here but its recordkeeping consequences live in establishments.json alongside 1904.30.",
+    "verification_note": "Verified against the eCFR text of 1904.46. Rule wording here is condensed for use as a controlled vocabulary \u2014 the substance and the sub-clause cites are checked, the phrasing is not verbatim. The Part 1904 recordkeeping rule was published at 66 FR 6122 (Jan. 19, 2001); the full Federal Register trail is recorded on the 1904.29 datasets.",
+    "editorial_note": "At 82 FR 20548, May 3, 2017, as required by the Congressional Review Act and Public Law 115-21, OSHA REMOVED all amendments to Part 1904 published at 81 FR 91792, Dec. 19, 2016. Any copy of Part 1904 dated between December 2016 and May 2017 may therefore contain provisions that no longer exist. Verify against current eCFR, not an archived copy from that window."
+  },
+  "definitions": {
+    "physician_or_other_licensed_health_care_professional": {
+      "cfr_cite": "1904.46",
+      "term": "Physician or Other Licensed Health Care Professional (PLHCP)",
+      "definition": "An individual whose legally permitted scope of practice \u2014 their license, registration or certification \u2014 allows them to independently perform, or to be delegated the responsibility to perform, the activities described by Part 1904.",
+      "note": "The test is what the person's licence permits, not what they are called. A nurse practitioner, audiologist or physical therapist may be a PLHCP for the activity in question; someone acting outside their permitted scope is not, whatever their title."
+    },
+    "injury_or_illness": {
+      "cfr_cite": "1904.46",
+      "term": "Injury or illness",
+      "definition": "An abnormal condition or disorder. Injuries include cases such as a cut, fracture, sprain or amputation. Illnesses include both acute and chronic conditions such as a skin disease, respiratory disorder or poisoning.",
+      "note": "The lists are illustrative, not exhaustive. An injury or illness is recordable only if it is a new, work-related case meeting one or more of the Part 1904 recording criteria \u2014 the definition itself decides nothing."
+    },
+    "establishment": {
+      "cfr_cite": "1904.46",
+      "term": "Establishment",
+      "definition": "A single physical location where business is conducted or where services or industrial operations are performed. For operations without a single physical location \u2014 construction, transportation, communications, electric, gas and sanitary services and similar \u2014 the establishment is the main or branch office, terminal or station that supervises the activity or is the base from which personnel carry it out.",
+      "note": "See establishments.json for the 1904.46(1)-(3) boundary tests and the 1904.30 recordkeeping consequences."
+    },
+    "the_act": {
+      "cfr_cite": "1904.46",
+      "term": "The Act",
+      "definition": "The Occupational Safety and Health Act of 1970 (29 U.S.C. 651 et seq.). The definitions in section 3 of the Act (29 U.S.C. 652) and related interpretations apply to those terms when used in Part 1904."
+    },
+    "you": {
+      "cfr_cite": "1904.46",
+      "term": "You",
+      "definition": "An employer as defined in section 3 of the Occupational Safety and Health Act of 1970 (29 U.S.C. 652)."
+    }
+  }
+}

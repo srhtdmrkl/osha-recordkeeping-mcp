@@ -1,0 +1,110 @@
+{
+  "provenance": {
+    "cfr_cite": "1904.30, 1904.46",
+    "source_url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1904/subpart-D/section-1904.30",
+    "last_verified": "2026-08-21",
+    "decay_threshold_days": 365,
+    "note": "1904.30 decides WHICH 300 Log a case belongs on \u2014 the last question about an individual incident. The rule that surprises people is 1904.30(b)(4): a case follows the PLACE, not the employee. Someone injured while visiting another of your establishments is recorded on that establishment's log, not their home site's. The definition of 'establishment' itself lives in 1904.46, and two of its rules decide where a specific case goes: a telecommuter's home is NEVER an establishment (1904.46(3)), and for mobile work the establishment is the office, terminal or station that supervises the activity or serves as its base.",
+    "verification_note": "Verified against the eCFR text of 1904.30 and 1904.46. Rule wording here is condensed for use as a controlled vocabulary \u2014 the substance and the sub-clause cites are checked, the phrasing is not verbatim."
+  },
+  "separate_log_rule": {
+    "cfr_cite": "1904.30(a)",
+    "threshold_months": 12,
+    "rule": "A separate OSHA 300 Log is required for each establishment expected to be in operation for one year or longer."
+  },
+  "short_term_establishments": {
+    "cfr_cite": "1904.30(b)(1)",
+    "rule": "Injuries and illnesses at establishments expected to exist for LESS than a year must still be recorded, but no separate log is required for each. One 300 Log may cover all short-term establishments, or one per company division or geographic region."
+  },
+  "employee_establishment_link": {
+    "cfr_cite": "1904.30(b)(3)",
+    "rule": "Every employee must be linked to one establishment for recordkeeping purposes, including employees who work at several locations or at none of them. Their cases are recorded on that establishment's log, or on a log covering their short-term establishment."
+  },
+  "routing": {
+    "cfr_cite": "1904.30(b)(4)",
+    "rules": {
+      "occurred_at_an_establishment": {
+        "cfr_cite": "1904.30(b)(4)",
+        "destination": "establishment_where_injury_occurred",
+        "rule": "If the injury or illness occurs at one of your establishments, record it on the 300 Log of the establishment where it OCCURRED \u2014 even if the employee normally works at a different one of your establishments."
+      },
+      "occurred_away_from_all_establishments": {
+        "cfr_cite": "1904.30(b)(4)",
+        "destination": "establishment_where_employee_normally_works",
+        "rule": "If the employee is injured or becomes ill while not at any of your establishments \u2014 at a customer site, in transit, or working remotely \u2014 record the case on the 300 Log of the establishment at which the employee NORMALLY works."
+      }
+    }
+  },
+  "central_recordkeeping": {
+    "cfr_cite": "1904.30(b)(2)",
+    "transmit_within_days": 7,
+    "rule": "Records for an establishment may be kept at headquarters or another central location, but only if the employer can (i) transmit information about the injury or illness from the establishment to the central location within 7 calendar days of receiving information that a recordable case occurred, and (ii) produce and send the records from the central location back to the establishment within the time frames required by 1904.35 and 1904.40 when records must be provided to a government representative, employees, former employees or employee representatives.",
+    "conditions": {
+      "transmit_within_7_days": {
+        "cfr_cite": "1904.30(b)(2)(i)",
+        "description": "Transmit information from the establishment to the central location within 7 calendar days of receiving information that a recordable injury or illness occurred."
+      },
+      "produce_on_demand": {
+        "cfr_cite": "1904.30(b)(2)(ii)",
+        "description": "Produce and send records from the central location back to the establishment within the time frames of 1904.35 and 1904.40 when they must be provided to a government representative, employees, former employees or employee representatives."
+      }
+    }
+  },
+  "establishment_definition": {
+    "cfr_cite": "1904.46",
+    "definition": "A single physical location where business is conducted or where services or industrial operations are performed.",
+    "mobile_operations": {
+      "cfr_cite": "1904.46",
+      "rule": "Where employees do not work at a single physical location \u2014 construction; transportation; communications; electric, gas and sanitary services; and similar operations \u2014 the establishment is the main or branch office, terminal or station that either SUPERVISES the activity or is the BASE from which personnel carry it out."
+    },
+    "telecommuting": {
+      "cfr_cite": "1904.46(3)",
+      "rule": "An employee's home is NOT a business establishment and needs no separate 300 Log, even when they telecommute full time. Telecommuters must be linked to one of the employer's establishments under 1904.30(b)(3), and their cases go on that establishment's log."
+    }
+  },
+  "establishment_boundaries": {
+    "note": "Structural questions asked when designing the recordkeeping system, not when triaging an incident. Both tests are CONJUNCTIVE \u2014 every condition must be met, not merely most of them.",
+    "one_location_as_two_establishments": {
+      "cfr_cite": "1904.46(1)",
+      "rule": "Normally one business location is one establishment. Two or more separate businesses sharing a location may be treated as separate establishments ONLY when ALL of the following hold.",
+      "conditions": {
+        "distinctly_separate_business": {
+          "cfr_cite": "1904.46(1)(i)",
+          "description": "Each establishment represents a distinctly separate business."
+        },
+        "different_economic_activity": {
+          "cfr_cite": "1904.46(1)(ii)",
+          "description": "Each business is engaged in a different economic activity."
+        },
+        "no_single_naics_code": {
+          "cfr_cite": "1904.46(1)(iii)",
+          "description": "No one industry description in the North American Industry Classification System (2007) codes applies to the joint activities of the establishments."
+        },
+        "separate_business_records": {
+          "cfr_cite": "1904.46(1)(iv)",
+          "description": "Separate reports are routinely prepared for each establishment on employee numbers, wages and salaries, sales or receipts, and other business information."
+        }
+      },
+      "example": "A construction company operating at the same location as a lumber yard may be treated as two establishments."
+    },
+    "two_locations_as_one_establishment": {
+      "cfr_cite": "1904.46(2)",
+      "rule": "Two or more physical locations may be combined into a single establishment ONLY when ALL of the following hold.",
+      "conditions": {
+        "single_operation_common_management": {
+          "cfr_cite": "1904.46(2)(i)",
+          "description": "The employer operates the locations as a single business operation under common management."
+        },
+        "close_proximity": {
+          "cfr_cite": "1904.46(2)(ii)",
+          "description": "The locations are all in close proximity to each other."
+        },
+        "one_set_of_business_records": {
+          "cfr_cite": "1904.46(2)(iii)",
+          "description": "The employer keeps one set of business records for the locations \u2014 employee numbers, wages and salaries, sales or receipts, and other business information."
+        }
+      },
+      "example": "One manufacturing establishment might include the main plant, a warehouse a few blocks away, and an administrative services building across the street."
+    }
+  }
+}

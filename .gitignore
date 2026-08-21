@@ -1,0 +1,15 @@
+# Dependencies & Build Output
+node_modules/
+dist/
+*.log
+
+# Operating System
+.DS_Store
+
+# IDE & AI Assistant Caches
+.vscode/
+.claude/
+.gemini/
+
+# Cloudflare Workers
+.wrangler/

@@ -1,0 +1,57 @@
+{
+  "provenance": {
+    "cfr_cite": "1904.10",
+    "source_url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1904/subpart-C/section-1904.10",
+    "last_verified": "2026-08-21",
+    "decay_threshold_days": 365,
+    "note": "1904.10 is the one recording criterion in Part 1904 that is pure arithmetic. Two tests must BOTH be met, and crucially in the SAME ear: a Standard Threshold Shift relative to the baseline, and a total hearing level of 25 dB or more above audiometric zero. An STS in one ear and a 25 dB level in the other is not recordable.",
+    "verification_note": "The numeric thresholds below are taken directly from the text of 1904.10(a) and 1904.10(b)(1). The age-adjustment tables (Tables F-1/F-2 of 29 CFR 1910.95 appendix F) are NOT reproduced here \u2014 the tool accepts an age adjustment the caller derives from those tables rather than encoding values it cannot verify."
+  },
+  "frequencies_hz": [
+    2000,
+    3000,
+    4000
+  ],
+  "tests": {
+    "standard_threshold_shift": {
+      "cfr_cite": "1904.10(b)(1)",
+      "source_standard": "1910.95(g)(10)(i)",
+      "threshold_db": 10,
+      "comparison": "baseline",
+      "description": "A change in hearing threshold relative to the employee's baseline audiogram of an average of 10 dB or more at 2000, 3000 and 4000 Hz, in one or both ears."
+    },
+    "total_hearing_level": {
+      "cfr_cite": "1904.10(a)",
+      "threshold_db": 25,
+      "comparison": "audiometric_zero",
+      "description": "The employee's total hearing level averaged at 2000, 3000 and 4000 Hz on the CURRENT audiogram is 25 dB or more above audiometric zero, in the same ear(s) as the STS."
+    }
+  },
+  "baseline_selection": {
+    "cfr_cite": "1904.10(b)(2)(i)",
+    "rule": "Compare against the employee's baseline audiogram. If the employee has PREVIOUSLY experienced a recordable hearing loss, compare against the REVISED baseline \u2014 the audiogram reflecting that previous recordable case \u2014 not the original baseline."
+  },
+  "age_adjustment": {
+    "cfr_cite": "1904.10(b)(3)",
+    "rule": "The current audiogram MAY be age-adjusted using Tables F-1 or F-2 in appendix F of 29 CFR 1910.95 when determining whether an STS has occurred. It may NOT be age-adjusted when determining whether the total hearing level is 25 dB or more above audiometric zero.",
+    "applies_to": "standard_threshold_shift_only"
+  },
+  "retest": {
+    "cfr_cite": "1904.10(b)(4)",
+    "window_days": 30,
+    "record_within_days": 7,
+    "rule": "If the employee's hearing is retested within 30 days of the first test and the retest does NOT confirm the recordable STS, the case need not be recorded. If the retest DOES confirm it, the hearing loss illness must be recorded within 7 calendar days of the retest. If subsequent audiometric testing under 1910.95 shows the STS is not persistent, the recorded entry may be erased or lined out."
+  },
+  "work_relatedness": {
+    "cfr_cite": "1904.10(b)(5)",
+    "rule": "There are no special work-relatedness rules for hearing loss \u2014 apply 1904.5. If a workplace event or exposure caused, contributed to, or significantly aggravated the hearing loss, it is work-related."
+  },
+  "plhcp_override": {
+    "cfr_cite": "1904.10(b)(6)",
+    "rule": "If a physician or other licensed health care professional determines, following 1904.5, that the hearing loss is not work-related or that occupational noise exposure did not significantly aggravate it, the case need not be treated as work-related or recorded."
+  },
+  "log_entry": {
+    "cfr_cite": "1904.10(b)(7)",
+    "rule": "A recordable hearing loss case is entered with the HEARING LOSS column checked on the 300 Log."
+  }
+}

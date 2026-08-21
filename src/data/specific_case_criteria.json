@@ -1,0 +1,190 @@
+{
+  "provenance": {
+    "cfr_cite": "1904.8-1904.12",
+    "source_url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1904/subpart-C",
+    "last_verified": "2026-08-21",
+    "decay_threshold_days": 365,
+    "note": "1904.4(a)(3) requires recording a work-related new case that meets the general recording criteria of 1904.7 OR the application to specific cases of 1904.8 through 1904.12. These are INDEPENDENT recording triggers: they do not consult the closed first-aid list, and a case meeting one is recordable even when the only treatment given was first aid. 1904.8 has its own implementation rules \u2014 see bloodborne_pathogens below \u2014 including the negative rule that a cut from a CLEAN object is not recordable on this basis at all. Only FOUR of the five sections in that range carry criteria: 1904.12 is [Reserved].",
+    "verification_note": "1904.8, 1904.9, 1904.10 and 1904.11 verified against their eCFR text; 1904.12 confirmed [Reserved]; the 1910.1030(b) definitions below verified against that standard's text. The 1910.95 appendix F age-adjustment tables are deliberately not reproduced \u2014 the hearing-loss tool takes the adjustment as an input."
+  },
+  "criteria": {
+    "contaminated_needlestick_or_sharps": {
+      "cfr_cite": "1904.8",
+      "title": "Needlestick and sharps injuries",
+      "description": "A needlestick injury or a cut from a sharp object contaminated with another person's BLOOD or OTHER POTENTIALLY INFECTIOUS MATERIAL as defined at 1910.1030(b). OPIM is an enumerated list \u2014 semen, vaginal secretions, cerebrospinal, synovial, pleural, pericardial, peritoneal and amniotic fluid, saliva IN DENTAL PROCEDURES, any fluid visibly contaminated with blood, and fluids that cannot be differentiated; plus unfixed human tissue or organ other than intact skin; plus HIV/HBV cultures and infected experimental animal tissue. Recordable regardless of the treatment given. A cut from a CLEAN object, or one contaminated with something that is NOT blood or OPIM, is not recordable on this basis (1904.8(b)(2)) \u2014 it falls back to 1904.7. A sharp is any contaminated object that can penetrate skin: needles, scalpels, broken glass, broken capillary tubes, exposed dental wires.",
+      "basis": "Recordable under 1904.8: a needlestick or sharps injury contaminated with another person's blood or other potentially infectious material is recorded regardless of treatment.",
+      "aliases": [
+        "needlestick",
+        "dirty needle",
+        "sharps injury",
+        "scalpel cut",
+        "broken glass cut from a contaminated container",
+        "capillary tube",
+        "bloodborne exposure"
+      ],
+      "log_entry_note": "Enter on the 300 Log as an INJURY, and the employee's name may NOT be entered \u2014 1904.8(a) makes this an automatic privacy case under 1904.29(b)(6)-(9)."
+    },
+    "medical_removal": {
+      "cfr_cite": "1904.9",
+      "title": "Medical removal",
+      "description": "The employee was medically removed under the MEDICAL SURVEILLANCE requirements of an OSHA substance-specific standard. Removal must have met the standard's medical removal criteria \u2014 a voluntary removal made BEFORE those levels are reached is NOT recordable (1904.9(b)(3)).",
+      "basis": "Recordable under 1904.9: medical removal under the medical surveillance requirements of a substance-specific standard is a recordable case.",
+      "aliases": [
+        "medical removal protection",
+        "removed under the lead standard",
+        "cadmium removal",
+        "MRP"
+      ],
+      "log_entry_note": "Classify as either a days-away case or a restricted-work case depending on how the removal requirement was met \u2014 'other recordable' is not available (1904.9(b)(1)). If the removal followed a chemical exposure, check the POISONING column."
+    },
+    "occupational_hearing_loss_sts": {
+      "cfr_cite": "1904.10",
+      "title": "Occupational hearing loss",
+      "description": "A work-related hearing loss meeting BOTH 1904.10 tests in the SAME ear: a Standard Threshold Shift of 10 dB or more averaged at 2000, 3000 and 4000 Hz against the baseline, and a total hearing level of 25 dB or more above audiometric zero on the current audiogram. Run osha_evaluate_hearing_loss to compute this from the audiogram rather than judging it \u2014 the tool does the arithmetic and applies the retest and PLHCP rules.",
+      "basis": "Recordable under 1904.10: a work-related hearing loss meeting the standard threshold shift and total hearing level criteria is a recordable case.",
+      "aliases": [
+        "standard threshold shift",
+        "STS",
+        "audiogram shift",
+        "noise-induced hearing loss"
+      ],
+      "log_entry_note": "Check the HEARING LOSS column on the 300 Log (1904.10(b)(7))."
+    },
+    "tuberculosis_infection": {
+      "cfr_cite": "1904.11",
+      "title": "Tuberculosis",
+      "description": "An employee OCCUPATIONALLY exposed to someone with a known case of ACTIVE tuberculosis who subsequently develops a tuberculosis infection, evidenced by a positive skin test or diagnosis by a PLHCP. A positive skin test at a PRE-EMPLOYMENT physical is not recordable \u2014 there was no occupational exposure in your workplace (1904.11(b)(1)).",
+      "basis": "Recordable under 1904.11: a tuberculosis infection following occupational exposure to a known active case is a recordable case.",
+      "aliases": [
+        "TB conversion",
+        "positive PPD after exposure",
+        "tuberculin skin test conversion"
+      ],
+      "log_entry_note": "Check the RESPIRATORY CONDITION column on the 300 Log (1904.11(a))."
+    },
+    "bloodborne_exposure_with_diagnosis": {
+      "cfr_cite": "1904.8(b)(4)(i)",
+      "title": "Bloodborne exposure without a cut, resulting in diagnosis",
+      "description": "An employee was splashed with or otherwise exposed to blood or other potentially infectious material WITHOUT being cut or scratched, and the exposure resulted in the diagnosis of a bloodborne illness such as HIV, hepatitis B or hepatitis C. Record as an ILLNESS. An exposure with no diagnosis is NOT recordable on this basis \u2014 it is recordable only if it independently meets a 1904.7 criterion (1904.8(b)(4)(ii)).",
+      "basis": "Recordable under 1904.8(b)(4)(i): an exposure to blood or other potentially infectious material resulted in the diagnosis of a bloodborne illness. Record it as an illness, not an injury.",
+      "log_entry_note": "Record as an ILLNESS. The privacy-case rules of 1904.29(b)(6)-(9) apply to the named condition.",
+      "aliases": [
+        "splash to the eye then seroconverted",
+        "blood splash, later diagnosed with hepatitis C",
+        "mucous membrane exposure with diagnosis"
+      ]
+    }
+  },
+  "bloodborne_pathogens": {
+    "cfr_cite": "1904.8",
+    "other_potentially_infectious_material": {
+      "cfr_cite": "1910.1030(b)",
+      "definition": "Other Potentially Infectious Materials means, in three parts:",
+      "parts": {
+        "1_enumerated_body_fluids": {
+          "fluids": [
+            "semen",
+            "vaginal secretions",
+            "cerebrospinal fluid",
+            "synovial fluid",
+            "pleural fluid",
+            "pericardial fluid",
+            "peritoneal fluid",
+            "amniotic fluid",
+            "saliva in dental procedures"
+          ],
+          "catch_alls": [
+            "any body fluid that is visibly contaminated with blood",
+            "all body fluids in situations where it is difficult or impossible to differentiate between body fluids"
+          ]
+        },
+        "2_tissue_or_organ": "Any unfixed tissue or organ, OTHER THAN INTACT SKIN, from a human \u2014 living or dead.",
+        "3_cultures_and_infected_animals": "HIV-containing cell or tissue cultures, organ cultures, and HIV- or HBV-containing culture medium or other solutions; and blood, organs or other tissues from experimental animals infected with HIV or HBV."
+      },
+      "derived_boundary": "Part (1) is an ENUMERATED list plus two catch-alls. Reading the text: a body fluid that is not named, is not visibly contaminated with blood, and is distinguishable from other body fluids therefore falls outside it. Note 'saliva' qualifies only IN DENTAL PROCEDURES. This boundary is a reading of the enumeration, not additional guidance.",
+      "correction_note": "An earlier revision of this file rendered OPIM as 'human bodily fluids, tissues and organs' generally \u2014 paraphrased from the partial list at 1904.8(b)(1), which introduces it with 'These materials include:'. That was over-broad and would have over-recorded sharps injuries contaminated with fluids outside the enumeration."
+    },
+    "clean_object_falls_back": {
+      "cfr_cite": "1904.8(b)(2)",
+      "rule": "Not every cut, laceration, puncture or scratch is recordable. Only those contaminated with another person's blood or OPIM are recordable under 1904.8. A clean object, or a contaminant that is not blood or OPIM, means the case is recordable only if it meets a 1904.7 criterion."
+    },
+    "exposure_without_cut": {
+      "cfr_cite": "1904.8(b)(4)",
+      "rule": "A splash or exposure without a cut or scratch is recorded as an ILLNESS only if it results in the diagnosis of a bloodborne illness (b)(4)(i), or it meets a 1904.7 criterion (b)(4)(ii)."
+    },
+    "reclassify_on_later_diagnosis": {
+      "cfr_cite": "1904.8(b)(3)",
+      "rule": "If a recorded needlestick or sharps case later results in the diagnosis of an infectious bloodborne disease, update the 300 Log: update the case classification if it now results in death, days away, restricted work or job transfer; update the description to identify the infectious disease; and change the classification of the case from an INJURY to an ILLNESS."
+    },
+    "source_standard": "1910.1030(b)",
+    "blood": {
+      "cfr_cite": "1910.1030(b)",
+      "definition": "Human blood, human blood components, and products made from human blood. Blood is defined SEPARATELY from other potentially infectious material \u2014 1904.8 covers contamination with either."
+    },
+    "contaminated": {
+      "cfr_cite": "1910.1030(b)",
+      "definition": "The presence, or the REASONABLY ANTICIPATED presence, of blood or other potentially infectious materials on an item or surface. Proof of contamination is not required \u2014 reasonable anticipation suffices."
+    },
+    "contaminated_sharps": {
+      "cfr_cite": "1910.1030(b)",
+      "definition": "Any contaminated object that can penetrate the skin, including but not limited to needles, scalpels, broken glass, broken capillary tubes, and exposed ends of dental wires. This is an OPEN list \u2014 the test is whether the contaminated object can penetrate skin."
+    },
+    "parenteral": {
+      "cfr_cite": "1910.1030(b)",
+      "definition": "Piercing mucous membranes or the skin barrier through events such as needlesticks, HUMAN BITES, cuts and abrasions."
+    },
+    "exposure_incident": {
+      "cfr_cite": "1910.1030(b)",
+      "definition": "A specific eye, mouth, other mucous membrane, non-intact skin, or parenteral contact with blood or other potentially infectious materials resulting from performance of an employee's duties. This is the shape of the 1904.8(b)(4) splash case."
+    }
+  },
+  "medical_removal_rules": {
+    "cfr_cite": "1904.9",
+    "classification": {
+      "cfr_cite": "1904.9(b)(1)",
+      "rule": "Every medical removal case is entered as either days away from work or restricted work activity, depending on how the employer chose to comply with the removal requirement. If the removal resulted from a chemical exposure, the POISONING column must be checked."
+    },
+    "which_standards": {
+      "cfr_cite": "1904.9(b)(2)",
+      "rule": "Not all OSHA standards have medical removal provisions \u2014 bloodborne pathogens and noise do not. Many substance-specific chemical standards do, including but NOT limited to lead, cadmium, methylene chloride, formaldehyde and benzene. This is an open list; judge whether the governing standard has a medical removal provision rather than matching these names."
+    },
+    "voluntary_early_removal": {
+      "cfr_cite": "1904.9(b)(3)",
+      "rule": "A removal made voluntarily, before the medical removal levels required by the OSHA standard are reached, is NOT recordable. An employer who acts early is not penalised for it."
+    }
+  },
+  "tuberculosis_rules": {
+    "cfr_cite": "1904.11",
+    "pre_employment_test": {
+      "cfr_cite": "1904.11(b)(1)",
+      "rule": "A positive TB skin test obtained at a pre-employment physical is not recordable: the employee was not occupationally exposed to a known case of active tuberculosis in your workplace."
+    },
+    "line_out_circumstances": {
+      "cfr_cite": "1904.11(b)(2)",
+      "note": "PERMISSIVE, not mandatory \u2014 the employer MAY line out or erase a recorded TB case on evidence that it was not caused by occupational exposure. These three circumstances are the ones the regulation enumerates.",
+      "circumstances": {
+        "household_contact": {
+          "cfr_cite": "1904.11(b)(2)(i)",
+          "description": "The worker is living in a household with a person who has been diagnosed with active TB."
+        },
+        "public_health_department_contact": {
+          "cfr_cite": "1904.11(b)(2)(ii)",
+          "description": "The Public Health Department has identified the worker as a contact of an individual with a case of active TB unrelated to the workplace."
+        },
+        "medical_investigation": {
+          "cfr_cite": "1904.11(b)(2)(iii)",
+          "description": "A medical investigation shows the infection was caused by exposure to TB away from work, or proves the case was not related to the workplace TB exposure."
+        }
+      }
+    }
+  },
+  "reserved_sections": {
+    "1904.12": {
+      "status": "[Reserved]",
+      "fact": "1904.12 contains no text. It is a reserved placeholder in the CFR.",
+      "consequence": "There is NO independent recording trigger for musculoskeletal disorders. An MSD is recordable only if it meets the general 1904.7 criteria like any other injury or illness \u2014 not because 1904.12 says so, but because 1904.12 says nothing.",
+      "dangling_cross_reference": "1904.4(b)(1)(iv) still lists 'musculoskeletal disorder cases' among the additional criteria and points to \u00a7\u00a71904.8 through 1904.12. Following that pointer leads to an empty section. Do not read the absence of MSD criteria here as an omission in this dataset \u2014 it reflects the regulation.",
+      "do_not_invent": "If a future revision adds an MSD criterion, it will appear as text in 1904.12. Until then, nothing belongs in `criteria` for MSDs."
+    }
+  }
+}

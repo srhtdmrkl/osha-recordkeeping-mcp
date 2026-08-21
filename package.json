@@ -1,0 +1,64 @@
+{
+  "name": "osha-recordkeeping-mcp",
+  "version": "0.1.0",
+  "description": "Deterministic MCP server for OSHA recordkeeping determinations under 29 CFR Part 1904",
+  "author": "Serhat Demirkol <srhtdmrkl@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srhtdmrkl/osha-recordkeeping-mcp.git"
+  },
+  "homepage": "https://github.com/srhtdmrkl/osha-recordkeeping-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/srhtdmrkl/osha-recordkeeping-mcp/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "osha-recordkeeping-mcp": "dist/index.js",
+    "osha-recordkeeping-mcp-http": "dist/http.js"
+  },
+  "files": [
+    "dist",
+    "src/data"
+  ],
+  "scripts": {
+    "build": "tsc && rm -rf dist/data && cp -r src/data dist/data",
+    "start": "node dist/index.js",
+    "start:http": "node dist/http.js",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "check-decay": "tsx scripts/check-decay.ts",
+    "smoke": "npm run build && node scripts/smoke.mjs",
+    "smoke:http": "npm run build && node scripts/smoke-http.mjs",
+    "dev:worker": "wrangler dev",
+    "deploy:worker": "wrangler deploy",
+    "smoke:worker": "node scripts/smoke-worker.mjs",
+    "audit": "npm audit --omit=dev --audit-level=low",
+    "verify": "npm run build && npm test && npm run check-decay && npm run audit"
+  },
+  "keywords": [
+    "osha",
+    "mcp",
+    "ehs",
+    "recordkeeping",
+    "recordability",
+    "1904",
+    "300-log",
+    "compliance"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^26.1.2",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.1.0",
+    "tsx": "^4.7.0",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.115.0"
+  }
+}

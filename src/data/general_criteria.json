@@ -1,0 +1,139 @@
+{
+  "provenance": {
+    "cfr_cite": "1904.7(b)",
+    "source_url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1904/subpart-C/section-1904.7",
+    "last_verified": "2026-08-21",
+    "decay_threshold_days": 365,
+    "note": "The implementation paragraphs of 1904.7. The closed first-aid list at (b)(5)(ii) lives in first_aid_treatments.json; this file holds the rules AROUND it \u2014 what medical treatment excludes, when a restriction counts, and the three places where a PLHCP recommendation must be recorded even though the employee did not follow it.",
+    "verification_note": "Verified against the eCFR text of 1904.7(b). Rule wording here is condensed for use as a controlled vocabulary \u2014 the substance and the sub-clause cites are checked, the phrasing is not verbatim."
+  },
+  "medical_treatment_exclusions": {
+    "cfr_cite": "1904.7(b)(5)(i)",
+    "definition": "Medical treatment means the management and care of a patient to combat disease or disorder. For Part 1904 it does NOT include the following \u2014 a case involving only these is not recordable on a medical-treatment basis.",
+    "exclusions": {
+      "observation_or_counseling_only": {
+        "cfr_cite": "1904.7(b)(5)(i)(A)",
+        "description": "A visit to a physician or other licensed health care professional SOLELY for observation or counseling. Seeing a doctor is not itself medical treatment.",
+        "aliases": [
+          "sent to the clinic to be checked out",
+          "saw the doctor who said watch it",
+          "observation only"
+        ]
+      },
+      "diagnostic_procedure_only": {
+        "cfr_cite": "1904.7(b)(5)(i)(B)",
+        "description": "Diagnostic procedures such as x-rays and blood tests, including prescription medication used SOLELY for diagnostic purposes (for example eye drops to dilate pupils).",
+        "aliases": [
+          "x-ray",
+          "took an x-ray to be safe",
+          "blood test",
+          "MRI",
+          "dilating drops",
+          "scan"
+        ]
+      }
+    }
+  },
+  "professional_status_irrelevant": {
+    "cfr_cite": "1904.7(b)(5)(iv)",
+    "rule": "The professional status of the person providing treatment has NO effect on whether something is first aid or medical treatment. A treatment on the closed (b)(5)(ii) list is first aid even when a physician provides it; treatment beyond first aid is medical treatment even when a layperson provides it. 'A doctor did it' is not a basis for recording."
+  },
+  "recommendation_not_followed": {
+    "cfr_cite": "1904.7(b)",
+    "rule": "In each of the three situations below the case must be recorded even though the employee did not follow the recommendation. What the PLHCP recommended controls, not what the employee did.",
+    "situations": {
+      "days_away_recommended_but_employee_worked": {
+        "cfr_cite": "1904.7(b)(3)(ii)",
+        "description": "A PLHCP recommended the employee stay home, but the employee came to work anyway. Record as a days-away case and enter the number of calendar days the PLHCP recommended.",
+        "outcome": "days_away_from_work"
+      },
+      "restriction_recommended_but_employee_worked_normally": {
+        "cfr_cite": "1904.7(b)(4)(viii)",
+        "description": "A PLHCP recommended a job restriction meeting OSHA's definition, but the employee performed all routine job functions anyway. Record as a restricted-work case.",
+        "outcome": "restricted_work_or_transfer"
+      },
+      "medical_treatment_recommended_but_declined": {
+        "cfr_cite": "1904.7(b)(5)(v)",
+        "description": "A PLHCP recommended medical treatment beyond first aid and the employee did not follow the recommendation. Record the case anyway.",
+        "outcome": "medical_treatment"
+      }
+    }
+  },
+  "restricted_work": {
+    "cfr_cite": "1904.7(b)(4)",
+    "routine_functions": {
+      "cfr_cite": "1904.7(b)(4)(ii)",
+      "definition": "For recordkeeping purposes, an employee's routine functions are those work activities the employee regularly performs AT LEAST ONCE PER WEEK. A restriction on something done less often than weekly is not a restriction on a routine function."
+    },
+    "tests": {
+      "kept_from_routine_function_or_full_shift": {
+        "cfr_cite": "1904.7(b)(4)(i)",
+        "verdict": "restricted",
+        "description": "The employer keeps the employee from performing one or more routine functions, or from working the full workday they would otherwise have been scheduled to work \u2014 or a PLHCP recommends the same."
+      },
+      "partial_shift_worked": {
+        "cfr_cite": "1904.7(b)(4)(v)",
+        "verdict": "restricted",
+        "description": "The employee worked only a partial shift because of the injury or illness. A partial day is recorded as a day of job transfer or restriction \u2014 except on the day the injury occurred."
+      },
+      "job_transfer": {
+        "cfr_cite": "1904.7(b)(4)(ix)",
+        "verdict": "restricted",
+        "description": "The employee was assigned to a job other than their regular job for part of the day. Transfers are recorded in the same 300-Log box as restricted work (1904.7(b)(4)(x)). Does not include the day the injury occurred."
+      },
+      "day_of_injury_only": {
+        "cfr_cite": "1904.7(b)(4)(iii)",
+        "verdict": "not_restricted",
+        "description": "The restriction or transfer applies ONLY to the day on which the injury occurred or the illness began. Not recordable as a restricted-work case."
+      },
+      "reduced_output_only": {
+        "cfr_cite": "1904.7(b)(4)(vi)",
+        "verdict": "not_restricted",
+        "description": "The employee produces fewer goods or services than before but otherwise performs ALL routine functions and works the full shift. Not a restricted-work case."
+      },
+      "restriction_misses_routine_functions": {
+        "cfr_cite": "1904.7(b)(4)(iv)",
+        "verdict": "not_restricted",
+        "description": "A restriction was recommended, but it does not keep the employee from any routine job function or from working the full shift. A recommended restriction is recordable only if it actually affects a routine function."
+      }
+    },
+    "vague_restriction": {
+      "cfr_cite": "1904.7(b)(4)(vii)",
+      "rule": "For a vague recommendation such as 'light duty' or 'take it easy for a week', ask the PLHCP two questions: can the employee do ALL routine job functions, and can they work their FULL normally assigned shift? Two yes answers mean no work restriction. One or both no means restricted work. If the clarification CANNOT be obtained, the case MUST be recorded as restricted work.",
+      "default_when_unclarifiable": "restricted"
+    },
+    "day_counting": {
+      "cfr_cite": "1904.7(b)(4)(xi)",
+      "rule": "Days of job transfer or restriction are counted the same way as days away (1904.7(b)(3)(i)-(viii)). One difference: if the employee is permanently assigned to a job modified so as to eliminate the restricted routine functions, the count may stop when the change becomes permanent \u2014 but AT LEAST ONE day of restriction or transfer must be counted in such cases."
+    }
+  },
+  "day_counting": {
+    "cfr_cite": "1904.7(b)(3)",
+    "rules": {
+      "exclude_day_of_injury": {
+        "cfr_cite": "1904.7(b)(3)(i)",
+        "description": "Do not count the day the injury occurred or the illness began. Counting starts the following day."
+      },
+      "count_calendar_days": {
+        "cfr_cite": "1904.7(b)(3)(iv)",
+        "description": "Count CALENDAR days the employee was unable to work, regardless of whether they were scheduled. Weekends, holidays and vacation days are included if the employee would not have been able to work on them because of the injury or illness."
+      },
+      "end_on_recommended_return": {
+        "cfr_cite": "1904.7(b)(3)(iii)",
+        "description": "If a PLHCP recommends a return to work but the employee stays home, end the count on the recommended return date."
+      },
+      "employee_leaves_company": {
+        "cfr_cite": "1904.7(b)(3)(viii)",
+        "description": "If the employee leaves for a reason UNRELATED to the injury (retirement, plant closing, another job), the count may stop. If they leave BECAUSE of the injury or illness, estimate the total days and enter that."
+      },
+      "cap_at_180": {
+        "cfr_cite": "1904.7(b)(3)(vii)",
+        "description": "Total days away may be capped at 180 calendar days; entering 180 is adequate and no further tracking is required."
+      },
+      "case_spans_calendar_years": {
+        "cfr_cite": "1904.7(b)(3)(ix)",
+        "description": "Record the case once, in the year the injury or illness occurred. If the employee is still away when the annual summary is prepared, estimate the total and update the log entry later when the count is known or reaches the 180-day cap."
+      }
+    }
+  }
+}

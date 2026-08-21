@@ -1,0 +1,156 @@
+{
+  "provenance": {
+    "cfr_cite": "1904.7(b)(5)(ii)",
+    "source_url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1904/subpart-C/section-1904.7",
+    "last_verified": "2026-08-21",
+    "decay_threshold_days": 365,
+    "note": "This is the COMPLETE and CLOSED list of first-aid treatments under 1904.7(b)(5)(ii)(A)-(N). Any treatment not on this list is medical treatment beyond first aid. Do not add entries without a source verification.",
+    "verification_note": "Verified against the eCFR text of 1904.7(b)(5)(ii). Rule wording here is condensed for use as a controlled vocabulary \u2014 the substance and the sub-clause cites are checked, the phrasing is not verbatim."
+  },
+  "treatments": [
+    {
+      "code": "non_prescription_medication",
+      "cfr_cite": "1904.7(b)(5)(ii)(A)",
+      "description": "Using a non-prescription medication at nonprescription strength (prescription-strength doses are medical treatment).",
+      "aliases": [
+        "otc medication",
+        "over the counter",
+        "aspirin",
+        "ibuprofen at otc dose",
+        "antibiotic ointment"
+      ]
+    },
+    {
+      "code": "tetanus_immunization",
+      "cfr_cite": "1904.7(b)(5)(ii)(B)",
+      "description": "Administering tetanus immunizations (other immunizations, e.g. Hepatitis B or rabies, are medical treatment).",
+      "aliases": [
+        "tetanus shot",
+        "tetanus booster"
+      ]
+    },
+    {
+      "code": "wound_cleaning",
+      "cfr_cite": "1904.7(b)(5)(ii)(C)",
+      "description": "Cleaning, flushing, or soaking wounds on the surface of the skin.",
+      "aliases": [
+        "clean wound",
+        "flush wound",
+        "soak wound",
+        "irrigate skin"
+      ]
+    },
+    {
+      "code": "wound_covering",
+      "cfr_cite": "1904.7(b)(5)(ii)(D)",
+      "description": "Using wound coverings such as bandages, Band-Aids, gauze pads, etc.; or using butterfly bandages or Steri-Strips (other closing methods such as sutures or staples are medical treatment).",
+      "aliases": [
+        "bandage",
+        "band-aid",
+        "gauze",
+        "butterfly bandage",
+        "steri-strips",
+        "dressing"
+      ]
+    },
+    {
+      "code": "hot_or_cold_therapy",
+      "cfr_cite": "1904.7(b)(5)(ii)(E)",
+      "description": "Using hot or cold therapy.",
+      "aliases": [
+        "ice pack",
+        "cold pack",
+        "heat pack",
+        "ice",
+        "heating pad"
+      ]
+    },
+    {
+      "code": "non_rigid_support",
+      "cfr_cite": "1904.7(b)(5)(ii)(F)",
+      "description": "Using any non-rigid means of support, such as elastic bandages, wraps, non-rigid back belts, etc. (devices with rigid stays or other systems designed to immobilize parts of the body are medical treatment).",
+      "aliases": [
+        "elastic bandage",
+        "ace wrap",
+        "wrap",
+        "non-rigid back belt"
+      ]
+    },
+    {
+      "code": "temporary_immobilization_for_transport",
+      "cfr_cite": "1904.7(b)(5)(ii)(G)",
+      "description": "Using temporary immobilization devices while transporting an accident victim (splints, slings, neck collars, back boards, etc.).",
+      "aliases": [
+        "splint for transport",
+        "sling for transport",
+        "neck collar transport",
+        "back board"
+      ]
+    },
+    {
+      "code": "fingernail_drilling_or_blister_draining",
+      "cfr_cite": "1904.7(b)(5)(ii)(H)",
+      "description": "Drilling of a fingernail or toenail to relieve pressure, or draining fluid from a blister.",
+      "aliases": [
+        "drill fingernail",
+        "drill toenail",
+        "drain blister",
+        "relieve nail pressure"
+      ]
+    },
+    {
+      "code": "eye_patch",
+      "cfr_cite": "1904.7(b)(5)(ii)(I)",
+      "description": "Using eye patches.",
+      "aliases": [
+        "eye patch"
+      ]
+    },
+    {
+      "code": "eye_foreign_body_irrigation_or_swab",
+      "cfr_cite": "1904.7(b)(5)(ii)(J)",
+      "description": "Removing foreign bodies from the eye using only irrigation or a cotton swab.",
+      "aliases": [
+        "flush eye",
+        "eye irrigation",
+        "cotton swab eye"
+      ]
+    },
+    {
+      "code": "splinter_removal_simple",
+      "cfr_cite": "1904.7(b)(5)(ii)(K)",
+      "description": "Removing splinters or foreign material from areas other than the eye by irrigation, tweezers, cotton swabs, or other simple means.",
+      "aliases": [
+        "remove splinter",
+        "tweezers",
+        "remove foreign material simple"
+      ]
+    },
+    {
+      "code": "finger_guard",
+      "cfr_cite": "1904.7(b)(5)(ii)(L)",
+      "description": "Using finger guards.",
+      "aliases": [
+        "finger guard"
+      ]
+    },
+    {
+      "code": "massage",
+      "cfr_cite": "1904.7(b)(5)(ii)(M)",
+      "description": "Using massages (physical therapy or chiropractic treatment are medical treatment).",
+      "aliases": [
+        "massage"
+      ]
+    },
+    {
+      "code": "drinking_fluids_heat_stress",
+      "cfr_cite": "1904.7(b)(5)(ii)(N)",
+      "description": "Drinking fluids for relief of heat stress.",
+      "aliases": [
+        "drink fluids",
+        "hydration for heat",
+        "water for heat stress"
+      ]
+    }
+  ]
+}

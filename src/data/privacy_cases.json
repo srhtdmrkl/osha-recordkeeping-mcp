@@ -1,0 +1,128 @@
+{
+  "provenance": {
+    "cfr_cite": "1904.29(b)(6)-(b)(10)",
+    "source_url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1904/subpart-C/section-1904.29",
+    "last_verified": "2026-08-21",
+    "decay_threshold_days": 365,
+    "note": "1904.29(b)(7) enumerates the privacy concern cases. 1904.29(b)(8) closes the list: an employer may NOT treat any other injury or illness as a privacy concern case. This is a closed list in both directions \u2014 it is not a floor an employer may extend. Category (vi) is the only conditional one: it applies to OTHER ILLNESSES only (not injuries) and only when the employee voluntarily requests that their name not be entered on the log.",
+    "verification_note": "Verified against the eCFR text of 1904.29(b)(6)-(b)(10). Rule wording here is condensed for use as a controlled vocabulary \u2014 the substance and the sub-clause cites are checked, the phrasing is not verbatim. An earlier revision glossed (b)(7)(vi) as requiring an 'independent and voluntary' request; the regulation says only 'voluntarily', and the extra word was removed.",
+    "amendment_history": [
+      "66 FR 6122, Jan. 19, 2001",
+      "66 FR 52034, Oct. 12, 2001",
+      "67 FR 77170, Dec. 17, 2002",
+      "68 FR 38607, June 30, 2003",
+      "81 FR 91809, Dec. 19, 2016",
+      "82 FR 20548, May 3, 2017"
+    ],
+    "editorial_note": "At 82 FR 20548, May 3, 2017, as required by the Congressional Review Act and Public Law 115-21, OSHA REMOVED all amendments to Part 1904 published at 81 FR 91792, Dec. 19, 2016. Any copy of Part 1904 dated between December 2016 and May 2017 may therefore contain provisions that no longer exist. Verify against current eCFR, not an archived copy from that window."
+  },
+  "categories": {
+    "intimate_body_part_or_reproductive_system": {
+      "cfr_cite": "1904.29(b)(7)(i)",
+      "description": "An injury or illness to an intimate body part or the reproductive system.",
+      "conditional": false,
+      "aliases": [
+        "groin injury",
+        "genital injury",
+        "breast injury",
+        "reproductive system illness"
+      ]
+    },
+    "sexual_assault": {
+      "cfr_cite": "1904.29(b)(7)(ii)",
+      "description": "An injury or illness resulting from a sexual assault.",
+      "conditional": false,
+      "aliases": [
+        "assault",
+        "rape",
+        "sexual violence at work"
+      ]
+    },
+    "mental_illness": {
+      "cfr_cite": "1904.29(b)(7)(iii)",
+      "description": "A mental illness.",
+      "conditional": false,
+      "aliases": [
+        "psychiatric condition",
+        "PTSD",
+        "depression",
+        "anxiety disorder"
+      ]
+    },
+    "hiv_hepatitis_or_tuberculosis": {
+      "cfr_cite": "1904.29(b)(7)(iv)",
+      "description": "HIV infection, hepatitis, or tuberculosis.",
+      "conditional": false,
+      "aliases": [
+        "HIV",
+        "hep B",
+        "hep C",
+        "TB",
+        "seroconversion"
+      ]
+    },
+    "contaminated_needlestick_or_sharps": {
+      "cfr_cite": "1904.29(b)(7)(v)",
+      "description": "A needlestick injury or a cut from a sharp object that is contaminated with another person's blood or other potentially infectious material (see 1904.8 for definitions).",
+      "conditional": false,
+      "aliases": [
+        "needlestick",
+        "sharps injury",
+        "dirty needle",
+        "bloodborne exposure"
+      ]
+    },
+    "other_illness_employee_requested": {
+      "cfr_cite": "1904.29(b)(7)(vi)",
+      "description": "Any other ILLNESS, but only if the employee voluntarily requests that their name not be entered on the log. Does not apply to injuries.",
+      "conditional": true,
+      "requires": [
+        "is_illness",
+        "employee_requested_name_omitted"
+      ],
+      "aliases": [
+        "employee asked to be left off the log"
+      ]
+    }
+  },
+  "obligations": {
+    "log_entry": {
+      "cfr_cite": "1904.29(b)(6)",
+      "requirement": "Do not enter the employee's name on the OSHA 300 Log. Enter \"privacy case\" in the space normally used for the employee's name."
+    },
+    "separate_list": {
+      "cfr_cite": "1904.29(b)(6)",
+      "requirement": "Keep a separate, confidential list of the case numbers and employee names for privacy concern cases, so the cases can be updated and the information provided to the government if asked. Note the OSHA 301 Incident Report still carries the employee's full name in field 1, and is joined to the 300 Log line by the case number in field 10 \u2014 the confidential list is what makes the redacted 300 Log usable without exposing that link."
+    },
+    "description_discretion": {
+      "cfr_cite": "1904.29(b)(9)",
+      "requirement": "If there is a reasonable basis to believe the case description could still identify the employee even without the name, you may use discretion in describing the injury or illness on the 300 and 301 forms. Enter enough to identify the cause of the incident and the general severity, but omit details of an intimate or private nature. For example, a sexual assault case may be described as \"injury from assault\", and an injury to a reproductive organ as \"lower abdominal injury\"."
+    },
+    "disclosure_redaction": {
+      "cfr_cite": "1904.29(b)(10)",
+      "requirement": "When voluntarily providing the 300 or 301 forms to anyone other than government representatives, employees, former employees or authorized representatives, you must remove or hide employee names and other personally identifying information. Identifying information may be disclosed ONLY to: (i) an auditor or consultant hired by the employer to evaluate the safety and health program; (ii) to the extent necessary for processing a workers' compensation or other insurance benefits claim; or (iii) a public health authority or law enforcement agency for uses and disclosures not requiring consent, authorization or an opportunity to agree or object under the HHS privacy standards at 45 CFR 164.512."
+    }
+  },
+  "closed_list_rule": {
+    "cfr_cite": "1904.29(b)(8)",
+    "requirement": "You may not consider any other type of injury or illness to be a privacy concern case."
+  },
+  "disclosure_exceptions": {
+    "cfr_cite": "1904.29(b)(10)",
+    "note": "The only three circumstances in which the forms may be disclosed WITH personally identifying information.",
+    "exceptions": {
+      "safety_program_auditor_or_consultant": {
+        "cfr_cite": "1904.29(b)(10)(i)",
+        "description": "An auditor or consultant hired by the employer to evaluate the safety and health program."
+      },
+      "workers_compensation_or_insurance_claim": {
+        "cfr_cite": "1904.29(b)(10)(ii)",
+        "description": "To the extent necessary for processing a claim for workers' compensation or other insurance benefits."
+      },
+      "public_health_or_law_enforcement": {
+        "cfr_cite": "1904.29(b)(10)(iii)",
+        "description": "A public health authority or law enforcement agency, for uses and disclosures for which consent, an authorization, or an opportunity to agree or object is not required under the HHS Standards for Privacy of Individually Identifiable Health Information, 45 CFR 164.512."
+      }
+    }
+  }
+}

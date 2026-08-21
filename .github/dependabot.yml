@@ -1,0 +1,30 @@
+version: 2
+
+# CI catches a published advisory on the weekly cron; this opens the PR that
+# fixes it. Without both, a red build on Monday still waits on someone noticing.
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      # One PR for the dev toolchain rather than five. These land together or not
+      # at all — a wrangler bump that needs a matching miniflare is not two
+      # reviews, and the worker smoke is what proves either way.
+      dev-dependencies:
+        dependency-type: development
+    ignore:
+      # ts-jest 29.4.12 declares peer typescript ">=4.3 <7" and no release
+      # supports 7 yet, so a major bump here makes `npm ci` unresolvable — which
+      # is exactly how TypeScript 7 landed on main and broke the build. Minors
+      # and patches still come through. Drop this once ts-jest widens its peer.
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
+    # Production deps stay ungrouped and arrive one at a time: this tree is two
+    # packages deep, both reach a consumer's install, and each deserves reading.
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly

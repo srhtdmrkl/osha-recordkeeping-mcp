@@ -1,0 +1,56 @@
+name: Release
+
+# Fires only on a version tag. Nothing publishes on a push to main — a release is
+# a deliberate act, and the tag is the record of it.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # The tag is what users will pin to. A tag that disagrees with the manifest
+      # publishes a version nobody can trace back, so this fails before anything runs.
+      - name: Tag matches package.json version
+        run: |
+          TAG="${GITHUB_REF_NAME#v}"
+          PKG="$(node -p 'require("./package.json").version')"
+          if [ "$TAG" != "$PKG" ]; then
+            echo "Tag v$TAG does not match package.json version $PKG." >&2
+            echo "Fix one of them and re-tag." >&2
+            exit 1
+          fi
+          echo "Releasing $PKG."
+
+      # Re-run the full verification suite before creating the release.
+      - run: npx tsc --noEmit
+      - run: npm run build
+      - run: npm test
+      - run: node scripts/smoke.mjs
+      - run: node scripts/smoke-http.mjs
+      - run: node scripts/smoke-worker.mjs
+
+      # Never publish stale regulatory data. This is the check most likely to stop
+      # a release, and stopping it is the correct outcome.
+      - run: npm run check-decay
+
+      - run: npm run audit
+
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" --generate-notes --title "$GITHUB_REF_NAME"

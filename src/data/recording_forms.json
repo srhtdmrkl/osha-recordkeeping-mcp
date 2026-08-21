@@ -1,0 +1,81 @@
+{
+  "provenance": {
+    "cfr_cite": "1904.29(a)-(b)(5)",
+    "source_url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1904/subpart-C/section-1904.29",
+    "last_verified": "2026-08-21",
+    "decay_threshold_days": 365,
+    "note": "The forms half of 1904.29. Two obligations here are easy to miss: EVERY recordable case needs a 301 Incident Report as well as a 300 Log line, and both must be completed within 7 calendar days of receiving information that a recordable case occurred. The privacy provisions of (b)(6)-(b)(10) live in privacy_cases.json.",
+    "verification_note": "1904.29(a)-(b)(5) verified against eCFR text; the OSHA 301 field structure below is taken from the published Form 301 itself (OMB no. 1218-0176), which is the only source for it \u2014 1904.29's text does not enumerate the fields. Wording is condensed; the field numbers are the load-bearing part.",
+    "amendment_history": [
+      "66 FR 6122, Jan. 19, 2001",
+      "66 FR 52034, Oct. 12, 2001",
+      "67 FR 77170, Dec. 17, 2002",
+      "68 FR 38607, June 30, 2003",
+      "81 FR 91809, Dec. 19, 2016",
+      "82 FR 20548, May 3, 2017"
+    ],
+    "editorial_note": "At 82 FR 20548, May 3, 2017, as required by the Congressional Review Act and Public Law 115-21, OSHA REMOVED all amendments to Part 1904 published at 81 FR 91792, Dec. 19, 2016. Any copy of Part 1904 dated between December 2016 and May 2017 may therefore contain provisions that no longer exist. Verify against current eCFR, not an archived copy from that window."
+  },
+  "forms": {
+    "cfr_cite": "1904.29(a)",
+    "required": {
+      "osha_300": "OSHA 300 \u2014 Log of Work-Related Injuries and Illnesses. One or two lines describing each recordable case, with business information at the top (1904.29(b)(1)).",
+      "osha_300a": "OSHA 300-A \u2014 Summary of Work-Related Injuries and Illnesses. The year-end summary of the 300 Log (1904.29(b)(1)).",
+      "osha_301": "OSHA 301 \u2014 Injury and Illness Incident Report. Required for EVERY recordable case entered on the 300 Log, not just serious ones (1904.29(b)(2)). Fields 14-17 are narrative: do not put names, phone numbers or Social Security numbers in them."
+    }
+  },
+  "recording_deadline": {
+    "cfr_cite": "1904.29(b)(3)",
+    "days": 7,
+    "runs_from": "receiving information that a recordable injury or illness has occurred",
+    "rule": "Each recordable injury or illness must be entered on both the OSHA 300 Log and the 301 Incident Report within 7 calendar days of receiving information that it occurred. The clock runs from when the information is received, not from the incident."
+  },
+  "equivalent_forms": {
+    "cfr_cite": "1904.29(b)(4)",
+    "rule": "An equivalent form is one carrying the same information, as readable and understandable, completed using the same instructions as the OSHA form it replaces. Many employers use an insurance form in place of the 301, or supplement one with the additional information OSHA requires."
+  },
+  "electronic_records": {
+    "cfr_cite": "1904.29(b)(5)",
+    "rule": "Records may be kept on a computer if the system can produce equivalent forms when they are needed, as described under 1904.35 and 1904.40."
+  },
+  "form_301": {
+    "source": "OSHA Form 301, Injury and Illness Incident Report (OMB no. 1218-0176)",
+    "note": "Required for EVERY recordable case on the 300 Log (1904.29(b)(2)), within the same 7 calendar days (b)(3). Note the 301 carries the employee's full name in field 1 even when the 300 Log reads 'privacy case' \u2014 the two are joined by the case number in field 10, which is why 1904.29(b)(6) requires a separate confidential list.",
+    "pii_instruction": {
+      "source": "OSHA Form 301, note above fields 14-17",
+      "applies_to_fields": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "rule": "Do not include any personally identifiable information pertaining to the worker(s) involved in the incident in the narrative fields \u2014 no names, phone numbers or Social Security numbers. This sits alongside the 1904.29(b)(9) discretion to omit intimate detail, and applies to every case, not only privacy concern cases."
+    },
+    "fields": {
+      "employee": {
+        "1": "Full name",
+        "2": "Street, city, state, ZIP",
+        "3": "Date of birth",
+        "4": "Date hired",
+        "5": "Sex"
+      },
+      "health_care_professional": {
+        "6": "Name of physician or other health care professional",
+        "7": "If treatment was given away from the worksite, where \u2014 facility, street, city, state, ZIP",
+        "8": "Was the employee treated in an emergency room? (yes/no)",
+        "9": "Was the employee hospitalized overnight as an in-patient? (yes/no)"
+      },
+      "case": {
+        "10": "Case number from the Log \u2014 transfer it after recording the case; this is the join to the 300 Log line",
+        "11": "Date of injury or illness",
+        "12": "Time the employee began work",
+        "13": "Time of event, or check if it cannot be determined",
+        "14": "What was the employee doing just before the incident? Describe the activity and the tools, equipment or material in use. Be specific.",
+        "15": "What happened? How the injury occurred.",
+        "16": "What was the injury or illness? The part of the body affected and how.",
+        "17": "What object or substance directly harmed the employee? Leave blank if not applicable.",
+        "18": "If the employee died, the date of death"
+      }
+    }
+  }
+}

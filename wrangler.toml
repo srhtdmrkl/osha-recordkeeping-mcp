@@ -1,0 +1,57 @@
+name = "osha-recordkeeping-mcp"
+main = "src/worker.ts"
+# Pinned to a date the installed workerd supports. Bumping this changes runtime
+# behaviour, so it moves only deliberately — and `npm run smoke:worker` is what
+# proves a bump is safe.
+compatibility_date = "2026-05-03"
+
+# Not required — every dataset is imported statically, all determinations are pure,
+# and nothing touches the filesystem or a node built-in at runtime. Left off so that
+# a future import of a node API fails loudly here rather than silently working in
+# dev and breaking on deploy.
+# compatibility_flags = ["nodejs_compat"]
+
+# Rule to bundle .md files as plain text strings
+[[rules]]
+type = "Text"
+globs = ["**/*.md"]
+fallthrough = true
+
+[vars]
+MCP_PATH = "/mcp"
+
+# Host and Origin allowlists, both comma-separated, both unset by default.
+#
+# Unset is right for Host here: a worker answers on workers.dev and on any custom
+# domain bound to it, so a hardcoded guess would 403 the deployment that just
+# shipped. DNS rebinding — the attack the allowlist exists for — targets servers
+# on loopback and does not apply to a public origin.
+#
+# Set MCP_ALLOWED_ORIGINS if this should only answer browser clients from known
+# sites. Non-browser MCP clients send no Origin and are unaffected either way.
+# MCP_ALLOWED_HOSTS = "mcp.example.com"
+# MCP_ALLOWED_ORIGINS = "https://app.example.com"
+
+[observability]
+enabled = true
+
+# Rate limiting, in the worker rather than in a WAF rule.
+#
+# The deployment is on workers.dev, which is not a zone in this account, so a
+# dashboard rate limiting rule has nothing to attach to. Keeping it here is also
+# the better outcome: it is reviewed, versioned, and travels with the deploy
+# instead of living in a dashboard nobody diffs.
+#
+# 300/minute per client IP. Generous on purpose — the limiter keys on IP, and a
+# safety team behind one corporate NAT shares a single key. One triage chain is
+# roughly 15 requests (initialize, tools/list, eleven tool calls, resource and
+# prompt listing), so a handful of people working at once legitimately clears
+# 150/minute. This is sized to cut off a model looping on an error, not to meter
+# normal use. Tighten it from real traffic, not from a guess.
+#
+# `period` accepts only 10 or 60. Enforcement is per data centre rather than
+# globally coordinated, so treat it as a cutoff rather than an exact quota.
+[[ratelimits]]
+name = "MCP_RATE_LIMITER"
+namespace_id = "1001"
+simple = { limit = 300, period = 60 }

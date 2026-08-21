@@ -1,0 +1,48 @@
+{
+  "provenance": {
+    "cfr_cite": "1904.6",
+    "source_url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1904/subpart-C/section-1904.6",
+    "last_verified": "2026-08-21",
+    "decay_threshold_days": 365,
+    "note": "1904.6 decides whether an injury or illness is a NEW case or a continuation of one already recorded. It is the second condition of the 1904.4(a) conjunction. 1904.6(b)(3) creates a binding authority: an employer need not consult a PLHCP, but having consulted one, MUST follow the recommendation \u2014 so a PLHCP opinion outranks the rule logic below, and conflicting opinions are expressly the employer's call.",
+    "verification_note": "Verified against the eCFR text of 1904.6. Rule wording here is condensed for use as a controlled vocabulary \u2014 the substance and the sub-clause cites are checked, the phrasing is not verbatim. 1904.6(b)(1) is NOT a closed list. The regulation says 'examples MAY include occupational cancer, asbestosis, byssinosis and silicosis' \u2014 a described character, not an enumeration. The tool asks whether the illness has that character and never matches hardcoded illness names."
+  },
+  "tests": {
+    "no_prior_recorded_case": {
+      "cfr_cite": "1904.6(a)(1)",
+      "verdict": "new_case",
+      "description": "The employee has not previously experienced a recorded injury or illness of the same type affecting the same part of the body.",
+      "basis": "New case: the employee has no previously recorded injury or illness of the same type affecting the same part of the body (1904.6(a)(1))."
+    },
+    "recovered_then_work_event_caused_reappearance": {
+      "cfr_cite": "1904.6(a)(2)",
+      "verdict": "new_case",
+      "description": "The employee had a recorded injury or illness of the same type on the same body part, recovered completely \u2014 all signs and symptoms disappeared \u2014 and an event or exposure in the work environment caused the signs or symptoms to reappear.",
+      "basis": "New case: the employee had recovered completely from the prior recorded case and a workplace event or exposure caused the signs or symptoms to reappear (1904.6(a)(2))."
+    },
+    "workplace_event_caused_episode": {
+      "cfr_cite": "1904.6(b)(2)",
+      "verdict": "new_case",
+      "description": "The signs or symptoms arose as a result of an event or exposure in the workplace \u2014 for example an episode of occupational asthma. A recurrence caused by workplace exposure is a new case even though the condition is not new.",
+      "basis": "New case: the episode was caused by an event or exposure in the workplace, so it is treated as a new case even though the underlying condition is pre-existing (1904.6(b)(2))."
+    },
+    "chronic_recurring_without_exposure": {
+      "cfr_cite": "1904.6(b)(1)",
+      "verdict": "not_new_case",
+      "description": "An occupational illness whose signs or symptoms may recur or continue in the ABSENCE of a workplace exposure. Examples may include occupational cancer, asbestosis, byssinosis and silicosis \u2014 these are illustrations of the character, not an exhaustive list. Such a case is recorded ONCE only.",
+      "basis": "Not a new case: this is a chronic occupational illness whose signs or symptoms recur or continue without a workplace exposure, and such cases are recorded only once (1904.6(b)(1))."
+    },
+    "continuing_symptoms_no_new_exposure": {
+      "cfr_cite": "1904.6(a)",
+      "verdict": "not_new_case",
+      "description": "The employee has not recovered completely from the previously recorded case and no new workplace event or exposure caused the current signs or symptoms.",
+      "basis": "Not a new case: the employee has not recovered completely from the previously recorded case and no new workplace event caused these signs or symptoms \u2014 this is a continuation (1904.6(a))."
+    }
+  },
+  "plhcp_override": {
+    "cfr_cite": "1904.6(b)(3)",
+    "statement": "An employer is not required to seek the advice of a physician or other licensed health care professional on whether a case is new or a recurrence. But if such advice IS sought, the employer must follow the recommendation. Where two or more PLHCPs give recommendations, the employer must decide which is the most authoritative \u2014 best documented, best reasoned, or most authoritative \u2014 and record on that basis.",
+    "binding_basis": "The determination follows the PLHCP recommendation, which is binding once advice has been sought (1904.6(b)(3)).",
+    "conflict_basis": "Two or more PLHCP recommendations conflict. 1904.6(b)(3) assigns the employer the task of deciding which is best documented, best reasoned or most authoritative, and recording on that basis. This tool cannot weigh competing medical opinions."
+  }
+}

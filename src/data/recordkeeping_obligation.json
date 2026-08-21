@@ -1,0 +1,82 @@
+{
+  "provenance": {
+    "cfr_cite": "1904.1, 1904.2",
+    "source_url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1904/subpart-B/section-1904.1",
+    "last_verified": "2026-08-21",
+    "decay_threshold_days": 365,
+    "note": "The threshold question every other Part 1904 determination silently assumes. Two exemptions, measured at different levels: 1904.1 is a SIZE test across the ENTIRE COMPANY using PEAK employment in the last calendar year (1904.1(b)(1)-(b)(2)); 1904.2 is an INDUSTRY classification applying to INDIVIDUAL ESTABLISHMENTS, so one company can have some sites exempt and others not (1904.2(b)(1)). Size trumps industry: a non-exempt-industry establishment still needs no records if the company is size-exempt (1904.2(a)(2)). Both exemptions are PARTIAL \u2014 1904.39 severe-injury reporting survives either, and both sections say so in terms.",
+    "verification_note": "Verified against the eCFR text of 1904.1 and 1904.2. Appendix A to Subpart B \u2014 the exempt-industry NAICS list \u2014 is NOT reproduced; the tool takes the classification as an input and returns the three methods 1904.2(b)(2) gives for determining it.",
+    "amendment_history": [
+      "59 FR 15600, April 1, 1994",
+      "62 FR 6434, Feb. 11, 1997",
+      "62 FR 44552, Aug. 22, 1997",
+      "66 FR 6122, Jan. 19, 2001",
+      "85 FR 8731, Feb. 18, 2020"
+    ],
+    "amendment_history_1904_2": [
+      "37 FR 736, Jan. 18, 1972",
+      "42 FR 65165, Dec. 30, 1977",
+      "47 FR 145, Jan. 5, 1982",
+      "62 FR 44552, Aug. 22, 1997",
+      "66 FR 6122, Jan. 19, 2001",
+      "79 FR 56186, Sept. 18, 2014"
+    ]
+  },
+  "size_exemption": {
+    "cfr_cite": "1904.1(a)(1)",
+    "threshold_employees": 10,
+    "measured_on": "peak employment across the entire company during the last calendar year",
+    "rule": "If your company had 10 or fewer employees at all times during the last calendar year, you do not need to keep OSHA injury and illness records.",
+    "scope": {
+      "cfr_cite": "1904.1(b)(1)",
+      "rule": "The partial exemption for size is based on the number of employees in the ENTIRE COMPANY, not on the size of an individual business establishment."
+    },
+    "measurement": {
+      "cfr_cite": "1904.1(b)(2)",
+      "rule": "Determine the company's PEAK employment during the last calendar year. If there were no more than 10 employees at any time in that year, the company qualifies. An average headcount or a year-end figure is not the test."
+    }
+  },
+  "over_ten_employees": {
+    "cfr_cite": "1904.1(a)(2)",
+    "rule": "If your company had more than 10 employees at any time during the last calendar year, you must keep OSHA injury and illness records UNLESS the establishment is classified as a partially exempt industry under 1904.2."
+  },
+  "written_notification_override": {
+    "cfr_cite": "1904.1(a)(1)",
+    "rule": "BOTH exemptions fall away if the government asks the employer to keep records under 1904.41 or 1904.42. 1904.1(a)(1) puts it as OSHA or the Bureau of Labor Statistics informing you IN WRITING; 1904.2(a)(1) as the government asking you. Either way the request defeats the exemption, so it is checked before both tests.",
+    "also_cited": [
+      "1904.2(a)(1)"
+    ]
+  },
+  "survives_exemption": {
+    "cfr_cite": "1904.39",
+    "rule": "As required by 1904.39, ALL employers covered by the OSH Act must report to OSHA any work-related incident resulting in a fatality, the in-patient hospitalization of one or more employees, an employee amputation, or an employee loss of an eye. Being partially exempt from RECORDKEEPING does not exempt an employer from REPORTING \u2014 1904.1(a)(1) and 1904.2(a)(1) each say so explicitly.",
+    "why_this_matters": "This is the dangerous inference. An employer who correctly concludes 'we do not keep OSHA logs' and generalises it to 'OSHA paperwork does not apply to us' will miss the 8-hour fatality call \u2014 the most consequential deadline in Part 1904.",
+    "also_stated_at": [
+      "1904.1(a)(1)",
+      "1904.2(a)(1)"
+    ]
+  },
+  "industry_exemption": {
+    "cfr_cite": "1904.2",
+    "status": "classification_is_an_input",
+    "rule": "An establishment classified in a specific industry group listed in Appendix A to Subpart B does not need to keep OSHA injury and illness records.",
+    "scope": {
+      "cfr_cite": "1904.2(b)(1)",
+      "rule": "The partial industry classification exemption applies to INDIVIDUAL BUSINESS ESTABLISHMENTS. Where a company has several establishments engaged in different classes of business activity, some may be required to keep records while others are partially exempt."
+    },
+    "non_exempt_establishments": {
+      "cfr_cite": "1904.2(a)(2)",
+      "rule": "If one or more of a company's establishments are classified in a NON-exempt industry, records must be kept for all such establishments \u2014 unless the company is partially exempt for size under 1904.1. Size therefore trumps industry."
+    },
+    "appendix_a": "Appendix A to Subpart B is the exempt-industry list. It is deliberately not reproduced here; supply the classification as an input.",
+    "naics_determination": {
+      "cfr_cite": "1904.2(b)(2)",
+      "methods": [
+        "Search by keyword at the U.S. Census Bureau NAICS page (http://www.census.gov/eos/www/naics/) and pick the primary business activity that most closely matches (1904.2(b)(2)(i)).",
+        "Browse the complete NAICS structure from the same page: click the two-digit Sector code, then the six-digit code, to see its definition, cross-references and index items (1904.2(b)(2)(ii)).",
+        "If you know your old SIC code, use the 1987 SIC to 2002 NAICS concordance available under the 'Concordances' link on the same page (1904.2(b)(2)(iii)).",
+        "Or contact your nearest OSHA office or State agency for help determining the code (1904.2(b)(2))."
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "provenance": {
+    "cfr_cite": "1904.29",
+    "source_url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1904/subpart-C/section-1904.29",
+    "last_verified": "2026-08-21",
+    "decay_threshold_days": 365,
+    "note": "OSHA 300 Log classification, taken from the Form 300 layout. A case is entered in ONE outcome column \u2014 the most serious outcome \u2014 but both the days-away count (K) and the job-transfer/restriction count (L) are recorded when present. Day counts are capped at 180 days each per 1904.7(b)(3)(vii). The 'Remained at Work' bracket on the form spans columns (I) and (J) only; (H) is days AWAY from work and sits outside it.",
+    "verification_note": "Verified against the OSHA Form 300 itself. All four outcome column letters and labels (G/H/I/J), all six injury/illness type columns (M)(1)-(M)(6), and the day-count columns (K) and (L) match the published form. The most-serious-outcome rule this tool implements is stated on the form in terms: 'SELECT ONLY ONE circle based on the most serious outcome'. Note the form is the source for the column structure \u2014 1904.29's text does not enumerate it.",
+    "amendment_history": [
+      "66 FR 6122, Jan. 19, 2001",
+      "66 FR 52034, Oct. 12, 2001",
+      "67 FR 77170, Dec. 17, 2002",
+      "68 FR 38607, June 30, 2003",
+      "81 FR 91809, Dec. 19, 2016",
+      "82 FR 20548, May 3, 2017"
+    ],
+    "editorial_note": "At 82 FR 20548, May 3, 2017, as required by the Congressional Review Act and Public Law 115-21, OSHA REMOVED all amendments to Part 1904 published at 81 FR 91792, Dec. 19, 2016. Any copy of Part 1904 dated between December 2016 and May 2017 may therefore contain provisions that no longer exist. Verify against current eCFR, not an archived copy from that window."
+  },
+  "outcome_columns": {
+    "G": "Death",
+    "H": "Days away from work",
+    "I": "Remained at work \u2014 job transfer or restriction",
+    "J": "Remained at work \u2014 other recordable cases"
+  },
+  "illness_type_columns": {
+    "injury": "(M)(1) Injury",
+    "skin_disorder": "(M)(2) Skin disorder",
+    "respiratory_condition": "(M)(3) Respiratory condition",
+    "poisoning": "(M)(4) Poisoning",
+    "hearing_loss": "(M)(5) Hearing loss",
+    "other_illness": "(M)(6) All other illnesses"
+  },
+  "day_count_cap": 180,
+  "day_count_cap_cite": "1904.7(b)(3)(vii)",
+  "most_serious_outcome_rule": {
+    "source": "OSHA Form 300, Step 3",
+    "rule": "SELECT ONLY ONE circle based on the most serious outcome. Death (G) outranks days away (H), which outranks job transfer or restriction (I), which outranks other recordable cases (J)."
+  },
+  "day_count_columns": {
+    "K": {
+      "label": "Away from work",
+      "source": "OSHA Form 300, Step 4",
+      "description": "Number of days the injured or ill worker was away from work."
+    },
+    "L": {
+      "label": "On job transfer or restriction",
+      "source": "OSHA Form 300, Step 4",
+      "description": "Number of days the injured or ill worker was on job transfer or restriction."
+    }
+  },
+  "log_line_fields": {
+    "source": "OSHA Form 300, Steps 1-2",
+    "note": "What a complete 300 Log line entry requires, beyond the classification columns. 1904.29(b)(1) calls for 'a one or two line description'; these are the fields that description sits in.",
+    "identify_the_person": {
+      "A": "Case no.",
+      "B": "Employee's name \u2014 or 'privacy case' where 1904.29(b)(6) applies",
+      "C": "Job title (e.g. Welder)"
+    },
+    "describe_the_case": {
+      "D": "Date of injury or onset of illness",
+      "E": "Where the event occurred (e.g. Loading dock north end)",
+      "F": "Describe injury or illness, parts of body affected, and the object or substance that directly injured or made the person ill (e.g. Second degree burns on right forearm from acetylene torch)"
+    }
+  }
+}

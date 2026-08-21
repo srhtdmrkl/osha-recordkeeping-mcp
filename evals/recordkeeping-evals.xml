@@ -1,0 +1,190 @@
+<evaluation>
+  <qa_pair>
+    <question>A 400-person law firm's office, NAICS 541110, has an employee who slips and breaks a wrist. Is that office required to keep an OSHA 300 Log? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A residential construction company, NAICS 236118, employs 400 people. Is it partially exempt from OSHA recordkeeping under the industry exemption in Appendix A to Subpart B? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A machine shop employed 8 people for most of last year but took on 3 extra hands for a six-week rush in October, peaking at 11. A worker has now been hurt. Is the shop partially exempt from OSHA recordkeeping under 29 CFR 1904.1? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A landscaping company with 6 employees company-wide, which keeps no OSHA 300 Log because it is partially exempt for size, has a worker killed in a work-related incident. Must the company report the fatality to OSHA? Answer yes or no.</question>
+    <answer>yes</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A software tester who works from home full time tripped over a box of work equipment in her spare room during working hours and broke her wrist. Does her employer need to open a separate OSHA 300 Log for her home address? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A machine operator's ear was severed in an incident at 9am and the plant manager was told at 10am the same day. Must this be reported to OSHA within 24 hours under 29 CFR 1904.39? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A worker was formally admitted to hospital overnight after a head knock, purely so staff could observe him and run a scan. He was discharged the next morning with no treatment given. Must this in-patient hospitalization be reported to OSHA? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A delivery driver was killed in a collision on a public highway while making a work delivery. The crash was not in a construction work zone. Must the employer report this fatality to OSHA within 8 hours? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A warehouse uses workers from a temp agency. The agency pays them, but the warehouse's own supervisors assign their tasks and direct their work every shift. One of them sprains an ankle and needs several days off. Whose OSHA 300 Log does this case go on — the warehouse's or the temp agency's? Answer with one word: warehouse, or agency.</question>
+    <answer>warehouse</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A self-employed electrician working under contract at a plant falls from a ladder and breaks his wrist. The plant's safety manager directs his work daily. Whose OSHA 300 Log does this case belong on? Answer with one word: the plant's, or nobody's.</question>
+    <answer>nobody's</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A millwright based at the company's Ohio plant was sent to cover a shift at the company's Kentucky plant, where he cut his hand badly enough to need stitches. On which plant's OSHA 300 Log must this case be recorded? Answer with one word: Ohio, or Kentucky.</question>
+    <answer>Kentucky</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A field service engineer who normally works out of the company's Dallas depot was injured at a customer's factory, which the company does not own or operate. On which OSHA 300 Log must this case be recorded — the customer's site, or the Dallas depot? Answer with one word: customer, or Dallas.</question>
+    <answer>Dallas</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A worker was injured on 20 May 2026, but the supervisor did not pass the report to the safety office until 1 June 2026. Under 29 CFR 1904.29, by what date must the case be entered on the OSHA 300 Log? Answer as a date in YYYY-MM-DD form.</question>
+    <answer>2026-06-08</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A safety manager has entered a recordable sprain on the OSHA 300 Log with a two-line description. Is any additional OSHA form required for that same case? Answer with the form number, or "none".</question>
+    <answer>301</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>An employer wants to send its OSHA 300 and 301 forms, names intact, to the insurance carrier handling a workers' compensation claim. Is that permitted under 29 CFR 1904.29(b)(10) without redacting employee names? Answer yes or no.</question>
+    <answer>yes</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A newly hired hospital porter had a positive TB skin test at his pre-employment physical, before his first shift. Must the employer record this on the OSHA 300 Log? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A nurse who cared for a patient with known active tuberculosis later tested positive and the case was recorded on the 300 Log. The Public Health Department has since identified her as a contact of her brother, who has active TB unrelated to the hospital. Under 29 CFR 1904.11, is the employer required to remove the entry, or merely permitted to? Answer with one word: required, or permitted.</question>
+    <answer>permitted</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>An annual audiogram shows a machinist's hearing has shifted 20 dB from his baseline in the left ear, averaged at 2000, 3000 and 4000 Hz, but his total hearing level in that ear is only 20 dB above audiometric zero. His right ear is unchanged. Is this a recordable hearing loss case? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A worker's audiogram shows a 12 dB shift from baseline in the left ear only, and his total hearing level averaged at 2000, 3000 and 4000 Hz is 30 dB in the right ear but 18 dB in the left. Is this a recordable hearing loss case? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>An audiogram meets both the standard threshold shift and the 25 dB total hearing level in the same ear. The employer retested the employee 12 days later and the retest confirmed the shift. Within how many calendar days of that retest must the case be recorded on the 300 Log?</question>
+    <answer>7</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A plant's industrial hygienist reviewed blood lead results and pulled a worker off lead work as a precaution, at a level below the removal threshold the OSHA lead standard requires. The worker was assigned other duties for three weeks. Is this medical removal recordable on the OSHA 300 Log? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A worker was medically removed from cadmium work after his biological monitoring exceeded the level in the OSHA cadmium standard, and was assigned to restricted duty. Which injury and illness type column must this case be entered under on the OSHA 300 Log? Answer with one word.</question>
+    <answer>poisoning</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A lab technician was splashed in the eye with a patient's blood. She was not cut or scratched, the eye was irrigated, and she lost no time and had no restrictions. Follow-up testing came back negative and she was diagnosed with nothing. Is this exposure recordable on the OSHA 300 Log? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A nurse suffered a recorded needlestick from a contaminated needle six weeks ago. She has now been diagnosed with hepatitis C from that exposure and is off work. Should the employer add a new case to the 300 Log, or amend the entry already there? Answer with one word: new, or amend.</question>
+    <answer>amend</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A stockroom worker cut his hand on a clean box cutter blade. The wound was cleaned and covered with a bandage, and he finished his shift with no restrictions. Is this cut recordable under 29 CFR 1904.8? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A worker twisted his ankle on the stairs. The company nurse sent him to the clinic to be checked; they took an x-ray, found nothing broken, wrapped it in an elastic bandage and sent him back to his normal job the same day. No time off, no restrictions. Is this case OSHA recordable? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A physician told a worker to stay home for four days after a back strain. The worker ignored the advice and came in and worked his normal shifts all four days. Must the employer record this as a days-away case? Answer yes or no.</question>
+    <answer>yes</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A clinic note says an employee should be on "light duty" for a week after a shoulder strain, without saying what she cannot do. The employer telephoned the clinic twice and could not reach the provider for clarification. Should this be recorded as a restricted work case? Answer yes or no.</question>
+    <answer>yes</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A machine operator strained his wrist. His supervisor kept him off the press for the remainder of that day only, and he was back to all his normal duties the next morning. Is this a recordable restricted work case? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A worker has occupational asthma already recorded on a previous year's OSHA 300 Log. This week a chemical release on the line triggered an attack that put him on restricted duty. Is this episode a new case or a continuation of the recorded one? Answer with one word: new, or continuation.</question>
+    <answer>new</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>An employee with silicosis recorded on the 300 Log three years ago has had a significant flare-up of symptoms this month, with no new dust exposure at work. Should the employer record this flare-up as a new case? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>An employee's previously recorded shoulder injury flared up after a workplace lifting incident, which would normally make it a new case. The employer asked an occupational physician, who documented her opinion that this is a recurrence of the old injury rather than a new one. What must the employer record it as? Answer with one word: new, or recurrence.</question>
+    <answer>recurrence</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Two employees were hurt in the company parking lot on the same morning, both arriving for their shift. One was rear-ended in his car on the access road. The other slipped on ice walking from her car to the door and needed stitches. Which of the two cases is work-related under 29 CFR 1904.5? Answer with one word: the driver, or the walker.</question>
+    <answer>the walker</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>After a serious incident on site, an employee developed anxiety that her supervisor believes is clearly caused by the event. She has not given the employer anything from a doctor or therapist. Is this mental illness work-related under 29 CFR 1904.5? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A sales representative on an overnight business trip checked into her hotel, then slipped in the hotel bathroom that evening and fractured her wrist. Can the closed 1904.5(b)(2) exception list determine whether this is work-related, or does the regulation assign this to the employer's evaluation? Answer with one word: determined, or judgment.</question>
+    <answer>judgment</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A millwright caught his hand in a machine guard. The clinic closed the wound with three sutures. He was out of work for 4 calendar days, then returned on light duty with a lifting restriction for another 6 days. Which single outcome column of the OSHA 300 Log does this case belong in? Answer with the column letter.</question>
+    <answer>H</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A warehouse worker slipped and fractured a bone in her wrist. The clinic applied a bandage and nothing else, and she returned to her regular job the same day with no lost time and no work restrictions. Which outcome column of the OSHA 300 Log does this case belong in? Answer with the column letter.</question>
+    <answer>J</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A press operator suffered a crush injury and has now been away from work for 250 calendar days. What number should be entered as the days-away count for this case on the OSHA 300 Log?</question>
+    <answer>180</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A worker was struck by a falling load, was away from work for three days, and then died of those injuries. Which single outcome column of the OSHA 300 Log applies to this case? Answer with the column letter.</question>
+    <answer>G</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A maintenance technician's finger was amputated by a conveyor at 08:00 UTC on 10 March 2026. The plant manager was informed at 14:00 UTC the same day. By when must this be reported to OSHA? Answer as an ISO 8601 UTC timestamp.</question>
+    <answer>2026-03-11T14:00:00.000Z</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>An employee was injured in a fall at work on 1 January 2026 and died of those injuries on 15 February 2026, which is the day the employer learned of the death. Is this fatality reportable to OSHA under 29 CFR 1904.39? Answer yes or no.</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A nurse was stuck by a needle contaminated with a patient's blood and required sutures for the wound. The case is work-related and new. What exactly must be entered in the employee-name field of the OSHA 300 Log for this case?</question>
+    <answer>privacy case</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A machinist received a deep laceration requiring stitches. He is embarrassed about the incident and asks his supervisor to keep his name off the OSHA 300 Log. Which CFR sub-clause prohibits the employer from treating this as a privacy concern case? Answer with the citation only.</question>
+    <answer>1904.29(b)(8)</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A licensed health care professional diagnosed an employee with a work-related mental illness following a traumatic incident on site, and she was away from work for three days. She has made no request regarding her name. Which CFR sub-clause makes this a privacy concern case? Answer with the citation only.</question>
+    <answer>1904.29(b)(7)(iii)</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A phlebotomist was stuck by a needle that had been used on a patient. The puncture was washed out and covered with a bandage; nothing further was done, she lost no time and had no work restrictions. Is this case recordable on the OSHA 300 Log? Answer yes or no.</question>
+    <answer>yes</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>A warehouse worker aggravated a shoulder injury that is already recorded on this year's OSHA 300 Log, and the clinic put him on restricted duty for two more days. Should the employer create a new 300-Log entry for this, or update the existing one? Answer with one word: new or update.</question>
+    <answer>update</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>An incident report states that a worker strained his back lifting and was given medication for the pain. He lost no time, had no work restrictions, and received no diagnosis beyond the strain. The report does not state the strength of the medication. Is the resulting recordability determination final, or is it provisional pending confirmation? Answer with one word: final or provisional.</question>
+    <answer>provisional</answer>
+  </qa_pair>
+</evaluation>
