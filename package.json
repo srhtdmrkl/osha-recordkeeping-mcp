@@ -54,11 +54,11 @@
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
-    "@types/node": "^26.1.2",
-    "jest": "^30.4.2",
+    "@types/node": "^26.4.0",
+    "jest": "^30.5.0",
     "ts-jest": "^29.1.0",
-    "tsx": "^4.7.0",
+    "tsx": "^4.23.13",
     "typescript": "^6.0.3",
-    "wrangler": "^4.115.0"
+    "wrangler": "^4.127.1"
   }
 }
