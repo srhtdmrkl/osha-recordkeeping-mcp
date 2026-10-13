@@ -262,3 +262,5 @@ Connect locally via `npx @modelcontextprotocol/inspector`, or add to `claude_des
 ## Disclaimer
 
 Reference and triage only. Not legal advice, not a medical determination. Recordability edge cases frequently require a PLHCP or counsel. Work-relatedness (1904.5) is determined only along its deterministic paths; unclear origin, travel status, working at home, and any unestablished "solely" finding return `requires_judgment` rather than a verdict.
+
+[![M8ven Score](https://m8ven.ai/badge/mcp/srhtdmrkl-osha-recordkeeping-mcp-d34evw?v=7d56a317e0940d2e70428a9e667df62c)](https://m8ven.ai/mcp/srhtdmrkl-osha-recordkeeping-mcp-d34evw?s=readme)
